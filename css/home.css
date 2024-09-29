@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Racing+Sans+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Madimi+One&family=Racing+Sans+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background-color: rgb(248, 237, 237)!important;
+}
+
+.custom-navbar {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: rgb(23, 59, 69);
+}
+
+.custom-navbar .container .brand-name {
+    font-family: 'Madimi One', Arial, Helvetica, sans-serif;
+    font-size: 2.5em;
+}
+.custom-navbar .container .brand-name .brand-logo{
+    align-items: center;
+}
+
+.custom-navbar .container .login-button {
+    background-color: rgb(180, 63, 63);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 17px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.custom-navbar .container .login-button:hover {
+    background-color: rgb(255, 130, 37);
+} 
+
+.custom-navbar .container .navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.custom-navbar .container .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
