@@ -1,47 +1,195 @@
 @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Racing+Sans+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Madimi+One&family=Racing+Sans+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 body {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    background-color: rgb(248, 237, 237)!important;
+    background-color: rgb(245, 239, 230);
+    /* height: 3000px; */
+    overflow-x: hidden;
 }
 
-.custom-navbar {
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    background-color: rgb(23, 59, 69);
+.bg-image {
+    width: 100%;
+    /* height: 100vh; */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.75);
 }
 
-.custom-navbar .container .brand-name {
+/*--- Header/Navigation ---*/
+
+.navbar {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.navbar-scrolled {
+    background-color: rgb(26, 54, 54);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .brand-name {
     font-family: 'Madimi One', Arial, Helvetica, sans-serif;
-    font-size: 2.5em;
+    font-size: 2em;
+    font-weight: 500;
 }
-.custom-navbar .container .brand-name .brand-logo{
-    align-items: center;
-}
-
-.custom-navbar .container .login-button {
-    background-color: rgb(180, 63, 63);
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-weight: bold;
-    padding: 17px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: 0.3s background-color;
+.navbar .brand-name .brand-logo{
+    height: 1em;
+    width: 1em; 
+    transform: translateY(5px);
 }
 
-.custom-navbar .container .login-button:hover {
-    background-color: rgb(255, 130, 37);
-} 
-
-.custom-navbar .container .navbar-toggler {
+.navbar .navbar-toggler {
     border: none;
     font-size: 1.25rem;
 }
 
-.custom-navbar .container .navbar-toggler:focus {
+.navbar .navbar-toggler:focus {
     box-shadow: none;
     outline: none;
+}
+
+.nav-link {
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-link:hover, 
+.nav-link:active {
+    color: rgb(255,255,255);
+}
+
+@media (min-width: 768px){    
+    .navbar .login-button {
+        border: 2px solid rgb(214, 189, 152);
+        color: rgb(245, 239, 230);
+        font-size: 16px;
+        font-weight: bold;
+        padding: 15px 18px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: 0.3s background-color;
+    }
+
+    .navbar .login-button:hover {
+        background-color: rgb(214, 189, 152);
+        color: rgb(26, 54, 54);
+    } 
+    .nav-link:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 4px;
+        background-color: rgb(214, 189, 152);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    } 
+
+    .nav-link:hover:before,
+    .nav-link.active:before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+@media (max-width: 768px){
+    .navbar .login-button {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .nav-link {
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .nav-link:hover {
+        background-color: rgb(64, 83, 76);
+        color: rgb(245, 239, 230);
+        transition: all 0.3s;
+    }
+
+    .navbar .login-button {
+        border: 2px solid rgb(214, 189, 152);
+        color: rgb(245, 239, 230);
+        font-size: 16px;
+        font-weight: bold;
+        align-items: center;
+        width: 100%;
+        padding: 15px 18px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: 0.3s background-color;
+    }
+
+    .navbar .login-button:hover {
+        background-color: rgb(214, 189, 152);
+        color: rgb(26, 54, 54);
+    } 
+}
+
+
+/*--- Footer ---*/
+footer {
+	background: #101010;
+	padding: 86px 0;
+}
+.single-content {
+	text-align: center;
+	padding: 115px 0;
+}
+.single-box p {
+	color: #fff;
+	line-height: 1.9;
+}
+.single-box h3 {
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+}
+.single-box .card-area i {
+	color: #ffffff;
+	font-size: 20px;
+	margin-right: 10px;
+}
+.single-box ul {
+	list-style: none;
+	padding: 0;
+}
+.single-box ul li a {
+	text-decoration: none;
+	color: #fff;
+	line-height: 2.5;
+	font-weight: 100;
+}
+.single-box h2 {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+}
+#basic-addon2 {
+	background: #fe1e4f;
+	color: #fff;
+}
+.socials i {
+	font-size: 18px;
+	margin-right: 15px;
+}
+@media (max-width: 767px) {
+	.single-box {
+		margin-bottom: 50px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.single-box {
+		margin-bottom: 50px;
+	}
 }

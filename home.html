@@ -19,59 +19,140 @@
 </head>
 <body>
     <!-- Start Header/Navigation -->
-    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark">
-        <div class="container">
-            <a href="home.html" class="brand-name navbar-brand me-auto">
-                <img src="assets/icon.png" alt="" height="35x" width="35px" class="brand-logo d-inline-block align-text-top">
-                Feddy
-            </a>
-
-            <div class="collapse navbar-collapse" id="navbarFeddy">
-                <ul class="navbar-nav ms-auto mb-2 mb-md-0 pe-3">
-                    <li class="nav-item">
-                        <a href="home.html" class="nav-link mx-md-2 active" aria-current="page">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link mx-md-2">About</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link mx-md-2 dropdown-toggle" 
-                        id="navbarDropdownMenuLink" role="button" 
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                            Menu
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link mx-md-2">Contact Us</a>
-                    </li>
-                </ul>
+    <header class="bg-header">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+            <div class="container">
+                <a href="home.html" class="brand-name navbar-brand me-auto">
+                    <img src="assets/icon.png" alt="" class="brand-logo d-inline-block align-text-top">
+                    Foodie
+                </a>
+    
+                <div class="collapse navbar-collapse" id="navbarFeddy">
+                    <ul class="navbar-nav ms-auto mb-2 mb-md-0 pe-3">
+                        <li class="nav-item">
+                            <a href="home.html" class="nav-link mx-md-2 active" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link mx-md-2">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link mx-md-2 dropdown-toggle" 
+                            id="navbarDropdownMenuLink" role="button" 
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                                Menu
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                li
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link mx-md-2">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="login-button">Log in</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarFeddy" aria-controls="navbarFeddy" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
             </div>
-            
-            <a href="#" class="login-button">Log in</a>
+        </nav>
+        <section class="hero-section py-5" >
+            <div class="container py-3">
+                <img class="bg-image" src="assets/background-smaller.png"
+                alt="Bg Image">
+            </div>
+        </section>
+    </header>
+    
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-            data-bs-target="#navbarFeddy" aria-controls="navbarFeddy" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- <div class="container">    
+        
+    </div>
+    <div class="container">
 
+    </div>
+    
+    
+    <div class="content">
+        <div class="container">
+            <div class="single-content">
+
+            </div>
         </div>
-    </nav>
+    </div> -->
 
-    <div class=".container">
-        <div class="row">
-            <div class="col-sm-2"></div>
+    <!-- Main -->
+    <main>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <img src="img/logo.png" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam repellendus sunt praesentium aspernatur iure molestias.</p>
+                    <h3>We Accect</h3>
+                    <div class="card-area">
+                            <i class="fa fa-cc-visa"></i>
+                            <i class="fa fa-credit-card"></i>
+                            <i class="fa fa-cc-mastercard"></i>
+                            <i class="fa fa-cc-paypal"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <h2>Hosting</h2>
+                    <ul>
+                        <li><a href="#">Web Hosting</a></li>
+                        <li><a href="#">Cloud Hosting</a></li>
+                        <li><a href="#">CMS Hosting</a></li>
+                        <li><a href="#">WordPress Hosting</a></li>
+                        <li><a href="#">Email Hosting</a></li>
+                        <li><a href="#">VPS Hosting</a></li>
+                    </ul>
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <h2>Domain</h2>
+                    <ul>
+                        <li><a href="#">Web Domain</a></li>
+                        <li><a href="#">Cloud Domain</a></li>
+                        <li><a href="#">CMS Domain</a></li>
+                        <li><a href="#">WordPress Domain</a></li>
+                        <li><a href="#">Email Domain</a></li>
+                        <li><a href="#">VPS Domain</a></li>
+                    </ul>
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <h2>Newsletter</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur doloremque earum similique fugiat nobis. Facere?</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Enter your Email ..." aria-describedby="basic-addon2">
+                            <span class="input-group-text" id="basic-addon2"><i class="fa fa-long-arrow-right"></i></span>
+                        </div>
+                        <h2>Follow us on</h2>
+                        <p class="socials">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-dribbble"></i>
+                            <i class="fa fa-pinterest"></i>
+                            <i class="fa fa-twitter"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class=".container">
+    </footer>
 
-    </div>
-    <div class=".container">
-
-    </div>
-
-
+    <!-- Javascript -->
+    <script src="index.js"></script>
 </body>
 </html>
