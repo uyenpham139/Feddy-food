@@ -22,70 +22,138 @@
     <header class="bg-header">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
             <div class="container">
-                <a href="home.html" class="brand-name navbar-brand me-auto">
-                    <img src="assets/icon.png" alt="" class="brand-logo d-inline-block align-text-top">
+                <a class=" brand-name navbar-brand me-auto" href="#home">
+                    <img src="assets/logo.png" alt="" height="35x" width="35px" class="brand-logo d-inline-block align-text-top">
                     Foodie
                 </a>
-    
-                <div class="collapse navbar-collapse" id="navbarFeddy">
-                    <ul class="navbar-nav ms-auto mb-2 mb-md-0 pe-3">
-                        <li class="nav-item">
-                            <a href="home.html" class="nav-link mx-md-2 active" aria-current="page">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="about.html" class="nav-link mx-md-2">About</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link mx-md-2 dropdown-toggle" 
-                            id="navbarDropdownMenuLink" role="button" 
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                                Menu
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                li
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contact.html" class="nav-link mx-md-2">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <a href="#" class="login-button">Log in</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#navbarFeddy" aria-controls="navbarFeddy" aria-expanded="false" aria-label="Toggle navigation">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-    
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="brand-name offcanvas-title" id="offcanvasNavbarLabel">
+                            <img src="assets/logo.png" alt="" height="35x" width="35px" class="brand-logo d-inline-block align-text-top">
+                            Foodie
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <!-- <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form> -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-md-0 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link normal-btn mx-md-2 active" aria-current="page" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link normal-btn mx-md-2" href="#menu">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link normal-btn mx-md-2" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link normal-btn mx-md-2" href="#contact">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link login-button mx-md-2">Log in</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
-        <section class="hero-section py-5" >
+        <section class="hero-section py-5" id="hero">
             <div class="container py-3">
-                <img class="bg-image" src="assets/background-smaller.png"
-                alt="Bg Image">
+                <div class="row g-5">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="col-12 col-lg-6">
+                            <h1 class="title fw-bold">
+                                Delicious Dishes: Discover a World of Flavors
+                            </h1>
+                            <p class="description pt-4">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                Non a neque quod magnam consequuntur necessitatibus iusto, 
+                                impedit expedita obcaecati, distinctio doloribus veniam eaque incidunt officia ex ullam nihil! Pariatur, fugiat.
+                            </p>
+                            <button class="order-btn img-fluid mt-5">Order Now</button>
+                        </div>
+
+                        <div class="col-12 col-lg-6">
+                            <div class="d-flex justify-content-center">
+                                <img src="assets/hero.png" class="hero-img" alt="" />
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </section>
     </header>
-    
-
-    <!-- <div class="container">    
-        
-    </div>
-    <div class="container">
-
-    </div>
-    
-    
-    <div class="content">
-        <div class="container">
-            <div class="single-content">
-
-            </div>
-        </div>
-    </div> -->
 
     <!-- Main -->
     <main>
+        <section class="new-product py-5" id="new-pro">
+            <div class="container">
+                <h2 class="text-dark fw-bold text-center pt-5 pb-5">
+                    What's New
+                </h2>
+            </div>
 
+
+            
+        </section>
+
+        <section class="menu py-5" id="menu">
+            <div class="container"></div>
+                <h2 class="text-dark fw-bold text-center pt-5 pb-5">
+                    Food Menu
+                </h2>
+            </div>
+
+        </section>        
+
+        <section class="about py-5" id="about">
+            <div class="container">
+                <div class="row align-items-center gx-3 gy-5 py-5 mt-5">
+                    <div class="col-12 col-md-12 col-lg-5">
+                        <img src="assets/bun-dau.jpg"
+                        class="img-fluid mx-auto d-block"
+                        alt="a man using vr gadget" 
+                        width="70%" height="70%"/>
+                    </div>
+                    <div class="col-12 col-md-12 text-center text-lg-start col-lg-7">
+                        <h3 class="title fw-bold fs-1 pb-3">About Foodie</h2>
+                        <p class="about-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse et 
+                            perspiciatis iure, delectus quas repellat voluptate facere laborum. 
+                            Explicabo aut aliquam quae rem illo et, quam neque asperiores. At, numquam.
+                        </p>
+                        <p class="about-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse et 
+                            perspiciatis iure, delectus quas repellat voluptate facere laborum. 
+                            Explicabo aut aliquam quae rem illo et, quam neque asperiores. At, numquam.
+                        </p>
+                        <button
+                        class="read-more-btn btn-primary px-5 py-3 mt-3 fs-5 fw-medium"
+                        type="button">
+                            Read More About Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact py-5" id="contact">
+            <div class="container"></div>
+                <h2 class="text-dark fw-bold text-center pt-5 pb-5">
+                    Contact Us
+                </h2>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -94,7 +162,7 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-box">
-                        <img src="img/logo.png" alt="">
+                        <img src="assets/logo.png" alt="" class="brand-logo">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam repellendus sunt praesentium aspernatur iure molestias.</p>
                     <h3>We Accect</h3>
                     <div class="card-area">
