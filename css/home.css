@@ -6,17 +6,17 @@
 :root {
     /* Primary Color */
     --primary-color: rgb(26, 54, 54);
-  
+
     --background-color : rgb(245, 239, 230);
 
     --sub-color: rgb(64, 83, 76);
-  
+
     /* Background */
-    --white-color: #ffffff; 
-  
+    --white-color: #ffffff;
+
     /* Accent Gray */
     --heading-text: #000;
-  
+
     /* Text and Secondary Elements */
     --text-color: #333;
   }
@@ -24,12 +24,10 @@
 body {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     background-color: var(--background-color);
-    /* height: 3000px; */
     overflow-x: hidden;
 }
 
 /*--- Header/Navigation ---*/
-
 .navbar {
     font-family: "Inter", Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -42,19 +40,21 @@ body {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-.navbar .brand-name {
+.brand-name {
     font-family: 'Madimi One', Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    font-size: 2em!important;
     font-weight: 500!important;
-}
-
-.navbar .brand-name-scrolled {
     color: var(--primary-color);
+    transition: all 0.4s;
 }
 
-.navbar .brand-name .brand-logo{
+.brand-name-scrolled {
+    color: var(--white-color)!important;
+}
+
+.brand-logo{
     height: 1em;
-    width: 1em; 
+    width: 1em;
     transform: translateY(5px);
 }
 
@@ -68,10 +68,13 @@ body {
     outline: none;
 }
 
-.normal-btn {
+.nav-link {
+    color: var(--primary-color);
+}
+
+.nav-btn {
     position: relative;
     padding: 17px 3px!important;
-    color: rgb(255,255,255)!important;
 }
 
 .hero-section {
@@ -97,7 +100,7 @@ body {
     color: var(--sub-color);
     font-size: 20px;
 }
-  
+
 .hero-section .order-btn{
     background-color: var(--primary-color);
     color: rgb(255, 255, 255);
@@ -105,6 +108,7 @@ body {
     font-size: 1.8rem;
     font-weight: 500;
     border-radius: 10px;
+    text-decoration: none;
     transition: 0.2s ease;
 }
 
@@ -185,36 +189,35 @@ footer {
 	}
 }
 
-@media (min-width: 768px){     
-    .login-button-scrolled {
-        border: 2px solid var(--primary-color)!important;
-        color: rgb(255, 255, 255)!important;
+@media (min-width: 768px){
+    .login-button {
+        border: 2px solid var(--sub-color)!important;
         padding: 15px 18px!important;
         border-radius: 50px;
         text-decoration: none;
         transition: 0.3s background-color;
     }
 
-    .login-button-scolled:hover {
-        background-color: rgb(214, 189, 152);
-        color: rgb(26, 54, 54)!important;
-    } 
-
-    .login-button {
+    .login-button-scrolled {
         border: 2px solid rgb(214, 189, 152)!important;
-        color: rgb(255, 255, 255)!important;
-        padding: 15px 18px!important;
-        border-radius: 50px;
-        text-decoration: none;
-        transition: 0.3s background-color;
+        color: var(--white-color)!important;
     }
 
     .login-button:hover {
+        background-color: var(--sub-color);
+        color: var(--white-color)!important;
+    }
+
+    .login-button-scrolled:hover {
         background-color: rgb(214, 189, 152);
-        color: rgb(26, 54, 54)!important;
-    } 
-    
-    .normal-btn:before {
+        color: var(--primary-color)!important;
+    }
+
+    .nav-btn-scrolled {
+        color: var(--white-color)!important;
+    }
+
+    .nav-btn:before {
         content: "";
         position: absolute;
         bottom: 0;
@@ -222,13 +225,17 @@ footer {
         transform: translateX(-50%);
         width: 0;
         height: 4px;
-        background-color: rgb(214, 189, 152);
+        background-color: var(--sub-color);
         visibility: hidden;
         transition: 0.3s ease-in-out;
-    } 
+    }
 
-    .normal-btn:hover:before,
-    .normal-btn.active:before {
+    .nav-btn-scrolled:before {
+        background-color: rgb(214, 189, 152)!important;
+    }
+
+    .nav-btn:hover:before,
+    .nav-btn.active:before {
         width: 100%;
         visibility: visible;
     }
@@ -237,13 +244,13 @@ footer {
     .hero-section {
         display: block;
         text-align: center;
-    } 
+    }
 
     .offcanvas-header, .offcanvas-body {
         background-color: var(--primary-color);
     }
 
-    .offcanvas-header .brand-name, 
+    .offcanvas-header .brand-name,
     .offcanvas-header .btn-close {
         color: rgb(255, 255, 255);
     }
@@ -253,34 +260,27 @@ footer {
         outline: none;
     }
 
-    .login-button {
-        width: 100% !important;
-        text-align: center !important;
-    }
-
-    .normal-btn {
+    .nav-btn {
         text-align: center;
         font-weight: bold;
-    }
-    
-    .normal-btn:hover {
-        background-color: var(--sub-color);
-        color: rgb(245, 239, 230);
+        color: rgb(245, 239, 230) !important;
         transition: all 0.3s;
+    }
+
+    .nav-btn:hover {
+        background-color: var(--sub-color);
     }
 
     .login-button {
         background-color: rgb(214, 189, 152)!important;
         color: rgb(26, 54, 54)!important;
-        align-items: center;
-        width: 100%;
-        padding: 15px 18px;
+        text-align: center !important;
         border-radius: 50px;
         text-decoration: none;
         transition: 0.3s background-color;
     }
 
-    /* .login-button:hover {
-
-    }  */
+    .login-button:hover {
+        background-color: rgb(184, 163, 132)!important;
+    } 
 }
