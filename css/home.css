@@ -1,24 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Racing+Sans+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Madimi+One&family=Racing+Sans+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    /* Primary Color */
-    --primary-color: rgb(26, 54, 54);
+    --primary-color: rgb(255, 136, 91);
 
-    --background-color : rgb(245, 239, 230);
+    --background-color : rgb(242, 227, 219);
 
-    --sub-color: rgb(64, 83, 76);
+    --sub-color: rgb(38, 58, 41);
 
-    /* Background */
-    --white-color: #ffffff;
+    --sub-color-1: rgb(232, 106, 51);
 
-    /* Accent Gray */
-    --heading-text: #000;
+    --sub-sub-color: rgb(65, 100, 74);
 
-    /* Text and Secondary Elements */
-    --text-color: #333;
+    --white-color: rgb(255, 255, 255);
+
+    --heading-color: rgb(65, 100, 74);
+
+    --text-color: rgb(0, 0, 0);
+
+    --sub-text-color: rgb(51, 51, 51);
   }
 
 body {
@@ -26,7 +28,6 @@ body {
     background-color: var(--background-color);
     overflow-x: hidden;
 }
-
 /*--- Header/Navigation ---*/
 .navbar {
     font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -36,15 +37,15 @@ body {
 }
 
 .navbar-scrolled {
-    background-color: rgb(26, 54, 54);
+    background-color: var(--primary-color);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .brand-name {
-    font-family: 'Madimi One', Arial, Helvetica, sans-serif;
+    font-family: 'Righteous', Arial, Helvetica, sans-serif;
     font-size: 2em!important;
     font-weight: 500!important;
-    color: var(--primary-color);
+    color: var(--sub-sub-color)!important;
     transition: all 0.4s;
 }
 
@@ -69,7 +70,7 @@ body {
 }
 
 .nav-link {
-    color: var(--primary-color);
+    color: var(--sub-sub-color)!important;
 }
 
 .nav-btn {
@@ -79,9 +80,7 @@ body {
 
 .hero-section {
     padding: 3.2rem 1.5rem;
-    background-image: url(../assets/bg-img.png);
-    background-repeat: no-repeat;
-    background-image: cover;
+    background-color: var(--background-color);
 }
 
 .hero-section p {
@@ -93,17 +92,23 @@ body {
 .hero-section .title {
     padding-top: 50px;
     color: var(--primary-color);
+    font-family: "Madimi One", Arial, Helvetica, sans-serif;
     font-weight: 500;
 }
 
+.hero-section .title span {
+    color: var(--sub-sub-color);
+}
+
 .hero-section .description {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     color: var(--sub-color);
     font-size: 20px;
 }
 
 .hero-section .order-btn{
     background-color: var(--primary-color);
-    color: rgb(255, 255, 255);
+    color: var(--sub-sub-color);
     padding: 8px 24px;
     font-size: 1.8rem;
     font-weight: 500;
@@ -113,11 +118,34 @@ body {
 }
 
 .hero-section .order-btn:hover{
-    background-color: var(--sub-color);
+    background-color: var(--sub-sub-color);
+    color: var(--white-color);
 }
 /*-- Main --*/
-.about .title {
-    color: var(--sub-color);
+.section-title, .contact-section-title {
+    font-family: 'Madimi One', Arial, Helvetica, sans-serif;
+    font-size: 48px;
+}
+.section-title {
+    color: var(--sub-color-1)!important;
+}
+.contact-section-title {
+    color: var(--white-color)!important;
+}
+
+.about .title, .about .location {
+    color: var(--heading-color);
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+.about .description {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.about .location {
+    font-size: 26px;
+    font-weight: bold;
 }
 
 .about .read-more-btn {
@@ -126,9 +154,298 @@ body {
     font-weight: 500;
     border: none;
     border-radius: 10px;
+    transition: 0.3s all;
 }
 .about .read-more-btn:hover {
     background-color: var(--sub-color);
+}
+
+/*--- Menu ---*/
+
+.sec-wp {
+    position: relative;
+    z-index: 4;
+}
+
+.sec-title .h3-title {
+    color: var(--sub-color);
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.repeat-img {
+    background-image: url(../assets/menu-bg.png);
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.menu-tab-wp {
+    margin-bottom: 80px;
+}
+
+.menu-tab ul {
+    padding: 10px;
+    display: inline-block;
+    border-radius: 60px;
+    background: var(--background-color);
+    color: var(--sub-sub-color);
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-tab ul li, .menu-tab ul .filter-active {
+    display: inline-flex;
+    font-size: 18px;
+    line-height: normal;
+    cursor: pointer;
+    padding: 10px 26px;
+    border-radius: 30px;
+    transition: 0.3s;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-active {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    min-height: 50px;
+    z-index: -1;
+}
+
+.menu-tab ul li img {
+    margin-right: 10px;
+    position: relative;
+    top: 1px;
+}
+
+.menu-tab ul .filter-active {
+    color: #ffffff;
+    background-color: var(--primary-color);
+}
+
+.menu-list-row .bydefault_show .dish-box-wp {
+    display: inline-block !important;
+}
+
+.dish-box-wp {
+    display: none;
+}
+
+.dish-box {
+    border-radius: 30px;
+    background-color: var(--background-color);
+    display: flow-root;
+    padding: 0 30px 40px;
+    padding-top: 0;
+    margin: 130px 0 30px;
+    transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+}
+
+.dish-box:hover {
+    transform: scale(1.03);
+}
+
+.dist-img {
+    margin-top: -130px;
+    margin-bottom: 30px;
+}
+
+.dist-img img {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.dish-rating {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.dish-rating .star-icon {
+    color: var(--primary-color);
+}
+
+.dish-title {
+    padding: 0 30px;
+}
+
+.dish-title .h3-title {
+    margin-bottom: 2px;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    color: var(--sub-color);
+    transition: 0.3s;
+    min-height: 76px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 900;
+}
+
+.dish-title p {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: var(--sub-sub-color);
+    border-bottom: 2px solid rgb(204 204 204 / 30%);
+    padding-bottom: 20px;
+}
+
+.dist-bottom-row ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.dist-bottom-row ul li:last-child {
+    text-align: right;
+}
+
+.dist-bottom-row {
+    padding: 0 30px;
+}
+
+.dist-bottom-row ul li {
+    display: flex;
+    align-items: center;
+}
+
+.dist-bottom-row ul li b {
+    font-size: 26px;
+}
+
+.dish-add-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    transition: 0.3s;
+    background-color: rgb(255, 188, 0);
+}
+
+.dish-add-btn i {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.dish-add-btn:hover {
+    background: linear-gradient(145deg, #e3a92b, #ffc933);
+}
+
+/*-- Contact --*/
+.contact {
+    background-color: var(--sub-sub-color);
+    background-image: url(../assets/menu-bg.png);
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.contact .container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .contact-box {
+}
+
+.contact .item {
+    width: 100%;
+    height: 550px;
+    max-width: 920px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.4);
+    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    z-index: 1000;
+}
+
+.contact .contact-info {
+    background-color: var(--primary-color);
+}
+
+.contact .contact-info .first-text {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+    color: var(--white-color);
+}
+
+.contact .contact-info .second-text {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 20px;
+    color: var(--sub-color);
+}
+
+.social-media {
+    display: flex;
+    list-style: none;
+}
+
+.social-media ul li {
+    padding-left: 15px;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+}
+
+.social-media i {
+    background-color: var(--sub-sub-color)!important;
+    color: var(--white-color);
+    padding: 10px;
+    margin: 20px 5px;
+    border-radius: 50%;
+    transition: 0.3s all;
+}
+.social-media i:hover {
+    background-color: var(--sub-color)!important;
+}
+
+.contact .submit-form {
+    background-color: var(--background-color);
+}
+
+.submit-form .third-text {
+    font-size: 32px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    padding-top: 10px;
+    color: var(--sub-color);
+}
+
+.submit-form form {
+    padding: 0 50px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.submit-form .input-box {
+    height: 40px;
+    width: 70%;
+    margin: 30px 0;
+    position: relative;
+}
+
+.submit-form input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid var(--sub-sub-color);
+    border-radius: 20px;
+    outline: none;
+    padding-left: 10px;
+    font-size: 16px;
 }
 
 
@@ -191,7 +508,8 @@ footer {
 
 @media (min-width: 768px){
     .login-button {
-        border: 2px solid var(--sub-color)!important;
+        border: 2px solid var(--primary-color)!important;
+        color: var(--sub-color-1)!important;
         padding: 15px 18px!important;
         border-radius: 50px;
         text-decoration: none;
@@ -199,18 +517,18 @@ footer {
     }
 
     .login-button-scrolled {
-        border: 2px solid rgb(214, 189, 152)!important;
-        color: var(--white-color)!important;
+        border: 2px solid var(--sub-sub-color)!important;
+        color: var(--sub-sub-color)!important;
     }
 
     .login-button:hover {
-        background-color: var(--sub-color);
-        color: var(--white-color)!important;
+        background-color: var(--primary-color);
+        color: var(--sub-sub-color)!important;
     }
 
     .login-button-scrolled:hover {
-        background-color: rgb(214, 189, 152);
-        color: var(--primary-color)!important;
+        background-color: var(--sub-sub-color);
+        color: var(--white-color)!important;
     }
 
     .nav-btn-scrolled {
@@ -225,13 +543,13 @@ footer {
         transform: translateX(-50%);
         width: 0;
         height: 4px;
-        background-color: var(--sub-color);
+        background-color: var(--primary-color);
         visibility: hidden;
         transition: 0.3s ease-in-out;
     }
 
     .nav-btn-scrolled:before {
-        background-color: rgb(214, 189, 152)!important;
+        background-color: var(--sub-sub-color)!important;
     }
 
     .nav-btn:hover:before,
@@ -250,9 +568,8 @@ footer {
         background-color: var(--primary-color);
     }
 
-    .offcanvas-header .brand-name,
-    .offcanvas-header .btn-close {
-        color: rgb(255, 255, 255);
+    .offcanvas-header .brand-name {
+        color: var(--white-color)!important;
     }
 
     .offcanvas-header .btn-close:focus {
@@ -263,24 +580,25 @@ footer {
     .nav-btn {
         text-align: center;
         font-weight: bold;
-        color: rgb(245, 239, 230) !important;
+        color: var(--white-color)!important;
         transition: all 0.3s;
     }
 
     .nav-btn:hover {
-        background-color: var(--sub-color);
+        background-color: var(--sub-sub-color);
     }
 
     .login-button {
-        background-color: rgb(214, 189, 152)!important;
-        color: rgb(26, 54, 54)!important;
+        background-color: var(--sub-sub-color)!important;
+        color: var(--white-color)!important;
         text-align: center !important;
         border-radius: 50px;
         text-decoration: none;
         transition: 0.3s background-color;
     }
 
-    .login-button:hover {
-        background-color: rgb(184, 163, 132)!important;
-    } 
+    .login-button:hover,
+    .nav-btn.active {
+        background-color: var(--sub-color)!important;
+    }
 }
