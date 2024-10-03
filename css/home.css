@@ -25,8 +25,11 @@
 
 body {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    background-color: var(--background-color);
     overflow-x: hidden;
+}
+
+section {
+    background-color: var(--background-color);
 }
 /*--- Header/Navigation ---*/
 .navbar {
@@ -129,7 +132,9 @@ body {
     color: var(--white-color);
 }
 /*-- Main --*/
-.section-title, .contact-section-title {
+.section-title, 
+.contact-section-title,
+.news-title {
     font-family: 'Madimi One', Arial, Helvetica, sans-serif;
     font-size: 48px;
 }
@@ -138,6 +143,13 @@ body {
 }
 .contact-section-title {
     color: var(--white-color)!important;
+}
+
+.news-section {
+    background-color: var(--primary-color);
+}
+.news-title {
+    color: var(--white-color);
 }
 
 .about .title, .about .location {
@@ -202,7 +214,8 @@ body {
     z-index: 2;
 }
 
-.menu-tab ul li, .menu-tab ul .filter-active {
+.menu-tab ul li {
+/* .menu-tab ul .filter-active */
     display: inline-flex;
     font-size: 18px;
     line-height: normal;
@@ -214,13 +227,13 @@ body {
     align-items: center;
 }
 
-.filter-active {
+/* .filter-active {
     position: absolute;
     left: 0;
     top: 12px;
     min-height: 50px;
     z-index: -1;
-}
+} */
 
 .menu-tab ul li img {
     margin-right: 10px;
@@ -375,16 +388,15 @@ body {
     font-family: "Inter", Arial, Helvetica, sans-serif;
     font-size: 42px;
     font-weight: bold;
-    text-align: center;
-    padding: 20px 0;
+    padding: 20px 40px;
     color: var(--white-color);
 }
 
 .second-text {
     font-family: "Inter", Arial, Helvetica, sans-serif;
     font-size: 24px;
-    font-weight: bold;
-    padding: 20px 20px;
+    font-weight: 500;
+    padding: 20px 40px;
     color: var(--sub-color);
 }
 
@@ -422,7 +434,10 @@ body {
     top: 20px;
     left: 20px;
     padding-top: 10px;
+    padding-left: 40px;
     color: var(--sub-color);
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 .submit-form form {
@@ -491,8 +506,12 @@ textarea.input {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: 500;
-    cursor: pointer;
+    transition: 0.3s all;
+}
 
+.submit-btn:hover {
+    background-color: var(--sub-sub-color);
+    color: var(--white-color);
 }
 
 @media(max-width:850px){
@@ -506,16 +525,11 @@ textarea.input {
 
     .submit-form .text {
         font-size: 36px;
-        text-align: center;
-    }
-
-    .submit-btn {
-        font-size: 12px;
     }
 }
 /*--- Footer ---*/
 footer {
-	background: #101010;
+	background: var(--sub-color);
 	padding: 86px 0;
 }
 .single-content {
@@ -539,21 +553,41 @@ footer {
 .single-box ul {
 	list-style: none;
 	padding: 0;
+    color: var(--white-color);
+	font-weight: 100;
+	line-height: 2.5;
 }
 .single-box ul li a {
 	text-decoration: none;
-	color: #fff;
+	color: var(--white-color);
 	line-height: 2.5;
 	font-weight: 100;
 }
+
+.single-box input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.single-box a {
+    color: var(--white-color);
+}
+
+.socials a {
+    color: var(--white-color);
+}
+.socials a:hover {
+    color: var(--primary-color);
+}
+
 .single-box h2 {
 	color: #fff;
 	font-size: 20px;
 	font-weight: 700;
 }
 #basic-addon2 {
-	background: #fe1e4f;
-	color: #fff;
+	background: var(--primary-color);
+	color: var(--white-color);
 }
 .socials i {
 	font-size: 18px;
